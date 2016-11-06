@@ -1,0 +1,82 @@
+\documentclass[10pt]{beamer}
+
+\usetheme[progressbar=frametitle]{metropolis}
+\usepackage{appendixnumberbeamer}
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+\usepackage{listings}
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+
+\title{Pangaeic network}
+\subtitle{Technical theory description}
+\date{\today}
+
+\author{Aleksi Suomalainen}
+
+% \titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Table of contents}
+  \setbeamertemplate{section in toc}[sections numbered]
+  \tableofcontents[hideallsubsections]
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}{Pangaeic network}
+
+\end{frame}
+
+\begin{frame}{Machine languages}
+Machine languages, thus computers, can be abstracted as 2 main types: CISC (Complex instruction set computer), RISC (Reduced instruction set computer). EVM falls in to the category RISC, so any language has a subset of its instructions can be used to almost directly translate between its instruction set and EVM instruction set.
+\begin{columns}[T,onlytextwidth]
+	\column{0.5\textwidth}
+      \begin{alertblock}{CISC}
+         xor     eax, eax\\
+        mov     dword ptr [rbp - 4], 0\\
+        pop     rbp\\
+        ret
+      \end{alertblock}
+    \column{0.5\textwidth}
+	\begin{exampleblock}{RISC}
+         .pad    \#4\\
+        sub     sp, sp, \#4\\
+        mov     r0, \#0\\
+        str     r0, [sp]\\
+        add     sp, sp, \#4\\
+        bx      lr
+      	\end{exampleblock}
+\end{columns}
+\end{frame}
+
+
+\section{Blockchains}
+
+\begin{frame}{Ethereum}
+\end{frame}
+
+\begin{frame}{Storj}
+\end{frame}
+
+
+\section{Physical access}
+
+\begin{frame}{New physical medium possibilities}
+  
+\end{frame}
+
+\section{Conclusion}
+
+\begin{frame}{Summary}
+\end{frame}
+
+\begin{frame}[standout]
+  Questions?
+\end{frame}
+
+\end{document}
